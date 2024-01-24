@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fids.css">
+    <title>Document</title>
+    <!-- LOCAL TIME 12:05 -->
+</head>
+<body onload="startTime()">
+    <!-- <div class="bottom">  
+        <section id="bottomtip" class="bottomtip1es">Recuerde vigilar el equipaje en todo momento</section><section id="bottomtip" class="bottomtip1en">Remember to check for your luggage at all times</section>
+        <span>Local Time:  </span>
+        <span id="txt"></span>
+
+<script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m;
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  
+      return i;
+    }
+    </script>
+    </div>  -->
+    <table cellpadding="1" cellspacing="10" width="100%" >
+        <tbody>
+            <tr>
+                <td>Partidas • Departures</td> 
+            </tr>
+        </tbody>
+    </table>
+    <table cellpadding="1" cellspacing="10" width="100%">
+        <colgroup>
+            <col style="width:15%">
+            <col style="width:5%">
+            <col style="width:25%">
+            <col style="width:10%">
+            <col style="width:10%">
+            <col style="width:15%">
+        </colgroup>
+        <tbody>
+            <tr class="infotr">
+                <td>Aerolinea
+                    Airline
+                </td>
+                <td>Vuelo
+                    Flight
+                </td>
+                <td>Destino
+                    Destination
+                </td>
+                <td>Hora  
+                    Time
+                </td>
+                <td>Puerta
+                    Gate
+                </td>
+                <td>Estado
+                    Status
+                </td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\alitalia.jpg" alt=""></td>
+                <td>AZ 522</td>
+                <td>Milán-Malpensa</td>
+                <td>11:00</td>
+                <td>D2</td>
+                <td id="departed">DESPEGADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\finnair.jpg" alt=""></td>
+                <td>AY 1770</td>
+                <td><span class="stopover1departureS">Helsinki</span><span class="stopover2departure">San Pablo-Guarulhos</span></td>
+                <td>11:30</td>
+                <td>D23</td>
+                <td id="departed">DESPEGADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\sas.jpg" alt=""></td>
+                <td>SK 1001</td>
+                <td>Copenhague</td>
+                <td>12:10</td>
+                <td>D24</td>
+                <td id="closed">CERRADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 409</td>
+                <td>Madrid</td>
+                <td>12:45</td>
+                <td>D3</td>
+                <td id="boarding">EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 465</td>
+                <td>Barcelona</td>
+                <td>13:00</td>
+                <td>D4</td>
+                <td id="boarding">PRE-EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 423</td>
+                <td>Roma-Fiumicino</td>
+                <td>13:25</td>
+                <td>D5</td>
+                <td id="boarding">PRE-EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 439</td>
+                <td>Fráncfort del Meno</td>
+                <td>13:30</td>
+                <td>D1</td>
+                <td id="boarding">PRE-EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 429</td>
+                <td>París-Charles de Gaulle</td>
+                <td>13:40</td>
+                <td>D2</td>
+                <td><span id="delayed" class="delayed1">DEMORADO</span><span class="delayed_time">14:10</span></td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 415</td>
+                <td>Madrid</td>
+                <td>14:00</td>
+                <td>D3</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\alitalia.jpg" alt=""></td>
+                <td>AZ 524</td>
+                <td>Roma-Fiumicino</td>
+                <td>14:00</td>
+                <td>D7</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\aireuropa.jpg" alt=""></td>
+                <td>UX 70</td>
+                <td>Madrid</td>
+                <td>14:05</td>
+                <td>D8</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 433</td>
+                <td>Londres-Heathrow</td>
+                <td>14:05</td>
+                <td>D6</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\tap.jpg" alt=""></td>
+                <td>TP 1044</td>
+                <td>Lisboa</td>
+                <td>14:20</td>
+                <td>D16</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\airfrance.jpg" alt=""></td>
+                <td>AF 230</td>
+                <td>París-Charles de Gaulle</td>
+                <td>14:40</td>
+                <td>D9</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\aerlingus.jpg" alt=""></td>
+                <td>EI 872</td>
+                <td>Dublín</td>
+                <td>15:05</td>
+                <td>D25</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 499</td>
+                <td>Lisboa</td>
+                <td>15:20</td>
+                <td>D1</td>
+                <td><span id="delayed" class="delayed1">DEMORADO</span><span class="delayed_time">15:50</span></td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\iberia.jpg" alt=""></td>
+                <td>IB 6804</td>
+                <td>Madrid</td>
+                <td>15:35</td>
+                <td>D11</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\iberia.jpg" alt=""></td>
+                <td>IB 2700</td>
+                <td>Barcelona</td>
+                <td>15:50</td>
+                <td>D12</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\klm.jpg" alt=""></td>
+                <td>KL 704</td>
+                <td>Ámsterdam</td>
+                <td>16:05</td>
+                <td>D14</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\british.jpg" alt=""></td>
+                <td>BA 322</td>
+                <td>Londres-Heathrow</td>
+                <td>16:30</td>
+                <td>D13</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\virginatl.jpg" alt=""></td>
+                <td>VS 98</td>
+                <td>Londres-Heathrow</td>
+                <td>16:45</td>
+                <td>D15</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 445</td>
+                <td>Ámsterdam</td>
+                <td>16:55</td>
+                <td>D2</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\aeroflot.jpg" alt=""></td>
+                <td>SU 664</td>
+                <td><span class="stopover1departureA">Moscú-Shemeretyevo</span><span class="stopover2departure">Madrid</span></td>
+                <td>17:00</td>
+                <td>-</td>
+                <td id="delayed">CANCELADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\lufthansa.jpg" alt=""></td>
+                <td>LH 604</td>
+                <td>Múnich</td>
+                <td>17:10</td>
+                <td>D17</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\lufthansa.jpg" alt=""></td>
+                <td>LH 602</td>
+                <td>Fráncfort del Meno</td>
+                <td>17:25</td>
+                <td>D18</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 425</td>
+                <td>Roma-Fiumicino</td>
+                <td>17:40</td>
+                <td>D21</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 459</td>
+                <td>Múnich</td>
+                <td>18:00</td>
+                <td>D4</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 671</td>
+                <td>Berlín</td>
+                <td>18:05</td>
+                <td>D22</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 411</td>
+                <td>Madrid</td>
+                <td>18:10</td>
+                <td>D5</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 441</td>
+                <td>Fráncfort del Meno</td>
+                <td>18:10</td>
+                <td>D1</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\swiss.jpg" alt=""></td>
+                <td>LX 238</td>
+                <td>Zúrich</td>
+                <td>18:15</td>
+                <td>D19</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 469</td>
+                <td><span class="stopover1departureA">Moscú-Shemeretyevo</span><span class="stopover2departure">Madrid</span></td>
+                <td>18:30</td>
+                <td>-</td>
+                <td id="delayed">CANCELADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\turkish.jpg" alt=""></td>
+                <td>TK 232</td>
+                <td>Estambul</td>
+                <td>18:45</td>
+                <td>D20</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 455</td>
+                <td>Porto</td>
+                <td>19:05</td>
+                <td>D6</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 473</td>
+                <td>Zúrich</td>
+                <td>19:20</td>
+                <td>D7</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\iberia.jpg" alt=""></td>
+                <td>IB 6806</td>
+                <td>Madrid</td>
+                <td>19:30</td>
+                <td>D14</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\aireuropa.jpg" alt=""></td>
+                <td>UX 72</td>
+                <td>Madrid</td>
+                <td>19:40</td>
+                <td>D10</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 435</td>
+                <td>Londres-Heathrow</td>
+                <td>20:00</td>
+                <td>D3</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\tap.jpg" alt=""></td>
+                <td>TP 1046</td>
+                <td>Porto</td>
+                <td>20:15</td>
+                <td>D16</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\plusultra.png" alt=""></td>
+                <td>PU 528</td>
+                <td>Madrid</td>
+                <td>20:30</td>
+                <td>D25</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 443</td>
+                <td>Ámsterdam</td>
+                <td>20:35</td>
+                <td>D23</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\alitalia.jpg" alt=""></td>
+                <td>AZ 526</td>
+                <td>Roma-Fiumicino</td>
+                <td>21:00</td>
+                <td>D24</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 451</td>
+                <td>Lisboa</td>
+                <td>21:40</td>
+                <td>D22</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 471</td>
+                <td>Milán-Malpensa</td>
+                <td>22:00</td>
+                <td>D21</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\virginatl.jpg" alt=""></td>
+                <td>VS 102</td>
+                <td>Londres-Heathrow</td>
+                <td>22:05</td>
+                <td>D11</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\klm.jpg" alt=""></td>
+                <td>KL 706</td>
+                <td>Ámsterdam</td>
+                <td>22:10</td>
+                <td>D1</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\airfrance.jpg" alt=""></td>
+                <td>AF 232</td>
+                <td>París-Charles de Gaulle</td>
+                <td>22:10</td>
+                <td>D2</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\tap.jpg" alt=""></td>
+                <td>TP 1042</td>
+                <td>Lisboa</td>
+                <td>22:15</td>
+                <td>D15</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 463</td>
+                <td>Barcelona</td>
+                <td>22:15</td>
+                <td>D5</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\british.jpg" alt=""></td>
+                <td>BA 324</td>
+                <td>Londres-Heathrow</td>
+                <td>22:40</td>
+                <td>D12</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 431</td>
+                <td>París-Charles de Gaulle</td>
+                <td>22:50</td>
+                <td>D8</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 415</td>
+                <td>Roma-Fiumicino</td>
+                <td>23:25</td>
+                <td>D4</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 413</td>
+                <td>Madrid</td>
+                <td>23:25</td>
+                <td>D9</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\iberia.jpg" alt=""></td>
+                <td>IB 6806</td>
+                <td>Madrid</td>
+                <td>23:45</td>
+                <td>D13</td>
+                <td>En Horario</td>
+            </tr>
+        </tbody>
+        <table cellpadding="1" cellspacing="10" width="100%" >
+            <tbody>
+                <tr>
+                    <td>Lunes 30 de Enero de 2022 • Monday, January 30, 2022</td> 
+                </tr>
+            </tbody>
+        </table>
+        <table cellpadding="1" cellspacing="10" width="100%">
+            <colgroup>
+                <col style="width:15%">
+                <col style="width:5%">
+                <col style="width:25%">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:15%">
+            </colgroup>
+        <tbody>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 467</td>
+                <td><span class="stopover1departureA">Moscú-Shemeretyevo</span><span class="stopover2departure">Madrid</span></td>
+                <td>3:45</td>
+                <td>-</td>
+                <td id="delayed">CANCELADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 673</td>
+                <td><span class="stopover1departureO">Oslo</span><span class="stopover2departure">Copenhague</span></td>
+                <td>5:10</td>
+                <td>D1</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 437</td>
+                <td>Fráncfort del Meno</td>
+                <td>8:45</td>
+                <td>D2</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 453</td>
+                <td>Lisboa</td>
+                <td>8:50</td>
+                <td>D3</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 457</td>
+                <td>Porto</td>
+                <td>9:00</td>
+                <td>D4</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\airfrance.jpg" alt=""></td>
+                <td>AF 452</td>
+                <td>París-Orly</td>
+                <td>9:05</td>
+                <td>D11</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 417</td>
+                <td>Madrid</td>
+                <td>9:10</td>
+                <td>D5</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 447</td>
+                <td>Ámsterdam</td>
+                <td>9:20</td>
+                <td>D6</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 461</td>
+                <td>Múnich</td>
+                <td>9:25</td>
+                <td>D7</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\virginatl.jpg" alt=""></td>
+                <td>VS 100</td>
+                <td>Mánchester</td>
+                <td>9:25</td>
+                <td>D12</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 421</td>
+                <td>Londres-Heathrow</td>
+                <td>9:30</td>
+                <td>D8</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 427</td>
+                <td>París-Charles de Gaulle</td>
+                <td>9:40</td>
+                <td>D9</td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+                <td>NG 419</td>
+                <td>Roma-Fiumicino</td>
+                <td>9:50</td>
+                <td>D10</td>
+                <td>En Horario</td>
+            </tr>
+        </tbody>
+    </body>
+</html>

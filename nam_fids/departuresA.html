@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fids.css">
+    <title>Document</title>
+    <!-- LOCAL TIME 9:20 -->
+    <!-- CHECK-IN ZONE FIDS -->
+</head>
+<body onload="startTime()">
+    <!-- <div class="bottom">  
+        <section id="bottomtip" class="bottomtip1es">Recuerde vigilar el equipaje en todo momento</section><section id="bottomtip" class="bottomtip1en">Remember to check for your luggage at all times</section>
+        <span>Local Time:  </span>
+        <span id="txt"></span>
+
+<script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m;
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  
+      return i;
+    }
+    </script>  -->
+
+    <input type="text" id="airlineInput" placeholder="Search by airline...">
+    <input type="text" id="flightInput" placeholder="Search by flight number...">
+    <input type="text" id="hourInput" placeholder="Search by hour period...">
+    <input type="text" id="destinationInput" placeholder="Search by destination...">
+
+    <table cellpadding="1" cellspacing="10" width="100%" >
+        <tbody>
+            <tr>
+                <td>Partidas • Departures</td> 
+            </tr>
+        </tbody>
+    </table>
+    <table cellpadding="1" cellspacing="10" width="100%">
+        <colgroup>
+            <col style="width:15%"> 
+            <col style="width:10%">
+            <col style="width:25%">
+            <col style="width:10%">
+            <col style="width:10%">
+            <col style="width:10%">
+            <col style="width:15%">
+        </colgroup>
+        <tbody class="maintable">
+            <tr class="infotr">
+                <td>Aerolinea
+                    Airline
+                </td>
+                <td>Vuelo
+                    Flight
+                </td>
+                <td>Destino
+                    Destination
+                </td>
+                <td>Hora  
+                    Time
+                </td>
+                <td>Puerta
+                    Gate
+                </td>
+                <td>
+                    Check-In
+                </td>
+                <td>Estado
+                    Status
+                </td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 5</td>
+                <td>Cordoba</td>
+                <td>8:20</td>
+                <td>A2</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="departed">DESPEGADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 17</td>
+                <td>Bariloche</td>
+                <td>8:30</td>
+                <td>A18</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td id="departed">DESPEGADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 115</td>
+                <td>Rosario</td>
+                <td>8:35</td>
+                <td>A34</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="departed">DESPEGADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\latam.jpg" alt="LATAM Airlines"></td>
+                <td>4M 7760</td>
+                <td>Cordoba</td>
+                <td>8:40</td>
+                <td>A33</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td id="departed">DESPEGADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 183</td>
+                <td>Rio Gallegos</td>
+                <td>8:50</td>
+                <td>A3</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td id="departed">DESPEGADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 91</td>
+                <td>Bahia Blanca</td>
+                <td>8:55</td>
+                <td>A21</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td id="departed">DESPEGADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 241</td>
+                <td>Viedma</td>
+                <td>9:00</td>
+                <td>A38</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td id="closed">CERRADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 159</td>
+                <td>Posadas</td>
+                <td>9:10</td>
+                <td>A4</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="departed">DESPEGADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 213</td>
+                <td>Santa Fe</td>
+                <td>9:15</td>
+                <td>A31</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="departed">DESPEGADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 559</td>
+                <td>Cordoba</td>
+                <td>9:20</td>
+                <td>A5</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="closed">CERRADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 609</td>
+                <td>Bahia Blanca</td>
+                <td>9:30</td>
+                <td>A15</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td id="closed">CERRADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 637</td>
+                <td>Santiago del Estero</td>
+                <td>9:30</td>
+                <td>A28</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="closed">CERRADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 591</td>
+                <td>Resistencia</td>
+                <td>9:40</td>
+                <td>A26</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="boarding">EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 131</td>
+                <td>Corrientes</td>
+                <td>9:40</td>
+                <td>A6</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="closed">CERRADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\argentina.jpg" alt="Aerolineas Argentinas"></td>
+                <td>AR 1690</td>
+                <td>Cordoba</td>
+                <td>9:40</td>
+                <td>A16</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td id="closed">CERRADO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 141</td>
+                <td>El Calafate</td>
+                <td>9:40</td>
+                <td>A20</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td id="delayed">ULTIMO AVISO</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 573</td>
+                <td>Posadas</td>
+                <td>9:45</td>
+                <td>A14</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="boarding">EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 103</td>
+                <td>San Juan</td>
+                <td>9:50</td>
+                <td>A7</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="boarding">EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 583</td>
+                <td>Formosa</td>
+                <td>10:00</td>
+                <td>A44</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="boarding">PRE-EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 661</td>
+                <td>Mendoza</td>
+                <td>10:10</td>
+                <td>A30</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="boarding">PRE-EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\latam.jpg" alt="LATAM Airlines"></td>
+                <td>4M 7813</td>
+                <td>Puerto Iguazu</td>
+                <td>10:10</td>
+                <td>A22</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td id="boarding">PRE-EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 65</td>
+                <td>Catamarca</td>
+                <td>10:10</td>
+                <td>A8</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="boarding">PRE-EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 601</td>
+                <td>Villa Gesell</td>
+                <td>10:20</td>
+                <td>A43</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td id="boarding">PRE-EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 147</td>
+                <td>Formosa</td>
+                <td>10:25</td>
+                <td>A37</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td id="boarding">PRE-EMBARQUE</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NS 16</td>
+                <td>Comodoro Rivadavia</td>
+                <td>10:30</td>
+                <td>A23</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 71</td>
+                <td>Neuquen</td>
+                <td>10:40</td>
+                <td>A9</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 45</td>
+                <td>Puerto Iguazu</td>
+                <td>10:40</td>
+                <td>A27</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 117</td>
+                <td>Rosario</td>
+                <td>10:55</td>
+                <td>A11</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 173</td>
+                <td>Resistencia</td>
+                <td>10:55</td>
+                <td>A42</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 761</td>
+                <td>Merlo</td>
+                <td>11:00</td>
+                <td>A26</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 55</td>
+                <td>La Rioja</td>
+                <td>11:15</td>
+                <td>A13</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 763</td>
+                <td>Rio Cuarto</td>
+                <td>11:20</td>
+                <td>A36</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 231</td>
+                <td>Mar del Plata</td>
+                <td>11:35</td>
+                <td>A19</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\argentina.jpg" alt="Aerolineas Argentinas"></td>
+                <td>AR 1601</td>
+                <td>Cordoba</td>
+                <td>11:35</td>
+                <td>A35</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 251</td>
+                <td>Santiago del Estero</td>
+                <td>11:40</td>
+                <td>A39</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 671</td>
+                <td>Cordoba</td>
+                <td>11:40</td>
+                <td>A41</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\argentina.jpg" alt="Aerolineas Argentinas"></td>
+                <td>AR 1700</td>
+                <td>Salta</td>
+                <td>11:50</td>
+                <td>A40</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 73</td>
+                <td>Mendoza</td>
+                <td>12:05</td>
+                <td>A25</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 201</td>
+                <td>Jujuy</td>
+                <td>12:05</td>
+                <td>A10</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 191</td>
+                <td>Tucuman</td>
+                <td>12:05</td>
+                <td>A24</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 617</td>
+                <td>Puerto Madryn</td>
+                <td>12:10</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 655</td>
+                <td>San Luis</td>
+                <td>12:15</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 81</td>
+                <td>Comodoro Rivadavia</td>
+                <td>12:25</td>
+                <td>A1</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 7</td>
+                <td>Cordoba</td>
+                <td>12:30</td>
+                <td>A38</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 19</td>
+                <td>Bariloche</td>
+                <td>12:30</td>
+                <td>A32</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 215</td>
+                <td>Santa Fe</td>
+                <td>12:40</td>
+                <td>A6</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 623</td>
+                <td>Esquel</td>
+                <td>12:40</td>
+                <td>A18</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 645</td>
+                <td>Bariloche</td>
+                <td>12:45</td>
+                <td>A34</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 561</td>
+                <td>Cordoba</td>
+                <td>13:00</td>
+                <td>A33</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 603</td>
+                <td>Villa Gesell</td>
+                <td>13:10</td>
+                <td>A4</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 29</td>
+                <td>Salta</td>
+                <td>13:15</td>
+                <td>A16</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 93</td>
+                <td>Bahia Blanca</td>
+                <td>13:15</td>
+                <td>A12</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 161</td>
+                <td>Posadas</td>
+                <td>13:20</td>
+                <td>A3</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 119</td>
+                <td>Rosario</td>
+                <td>13:20</td>
+                <td>A20</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 593</td>
+                <td>Resistencia</td>
+                <td>13:30</td>
+                <td>A5</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 685</td>
+                <td>Mendoza</td>
+                <td>13:35</td>
+                <td>A15</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 133</td>
+                <td>Corrientes</td>
+                <td>13:40</td>
+                <td>A28</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 687</td>
+                <td>Puerto Iguazu</td>
+                <td>13:50</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 689</td>
+                <td>Bariloche</td>
+                <td>13:50</td>
+                <td>A2</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 575</td>
+                <td>Posadas</td>
+                <td>13:55</td>
+                <td>A23</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 175</td>
+                <td>Resistencia</td>
+                <td>14:00</td>
+                <td>A19</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 691</td>
+                <td>Neuquen</td>
+                <td>14:00</td>
+                <td>A14</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 611</td>
+                <td>Bahia Blanca</td>
+                <td>14:00</td>
+                <td>A7</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 697</td>
+                <td>Ushuaia</td>
+                <td>14:05</td>
+                <td>A27</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 693</td>
+                <td>Cordoba</td>
+                <td>14:10</td>
+                <td>A31</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 695</td>
+                <td>Salta</td>
+                <td>14:10</td>
+                <td>A22</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 639</td>
+                <td>Santiago del Estero</td>
+                <td>14:15</td>
+                <td>A8</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\argentina.jpg" alt="Aerolineas Argetinas"></td>
+                <td>AR 1610</td>
+                <td>Bariloche</td>
+                <td>14:15</td>
+                <td>A43</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                  <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                  <td>NA 651</td>
+                  <td>Ushuaia</td>
+                  <td>14:30</td>
+                  <td>A37</td>
+                  <td class="check-in"><span class="check-in-letter">B</span></td>
+                  <td>En Horario</td>
+            </tr>
+            <tr>
+                  <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                  <td>NA 105</td>
+                  <td>San Juan</td>
+                  <td>14:30</td>
+                  <td>A21</td>
+                  <td class="check-in"><span class="check-in-letter">A</span></td>
+                  <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 685</td>
+                <td>Mendoza</td>
+                <td>14:30</td>
+                <td>A30</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 217</td>
+                <td>Santa Fe</td>
+                <td>14:30</td>
+                <td>A44</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 585</td>
+                <td>Formosa</td>
+                <td>14:35</td>
+                <td>A11</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 705</td>
+                <td>Puerto Iguazu</td>
+                <td>14:40</td>
+                <td>A42</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 149</td>
+                <td>Formosa</td>
+                <td>14:45</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 67</td>
+                <td>Catamarca</td>
+                <td>14:45</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 699</td>
+                <td>Cordoba</td>
+                <td>14:50</td>
+                <td>A36</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NS 20</td>
+                <td>Comodoro Rivadavia</td>
+                <td>14:55</td>
+                <td>A9</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 701</td>
+                <td>Bariloche</td>
+                <td>15:00</td>
+                <td>A35</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+              </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 703</td>
+                <td>Jujuy</td>
+                <td>15:05</td>
+                <td>A39</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+              </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 629</td>
+                <td>Rio Gallegos</td>
+                <td>15:10</td>
+                <td>A41</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 233</td>
+                <td>Mar del Plata</td>
+                <td>15:10</td>
+                <td>A40</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 65</td>
+                <td>Ushuaia</td>
+                <td>15:15</td>
+                <td>A25</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 73</td>
+                <td>Neuquen</td>
+                <td>15:20</td>
+                <td>A17</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 243</td>
+                <td>Viedma</td>
+                <td>15:25</td>
+                <td>A24</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 185</td>
+                <td>Rio Gallegos</td>
+                <td>15:30</td>
+                <td>A26</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 47</td>
+                <td>Puerto Iguazu</td>
+                <td>15:30</td>
+                <td>A10</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 789</td>
+                <td>Cordoba</td>
+                <td>15:30</td>
+                <td>A1</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 121</td>
+                <td>Rosario</td>
+                <td>15:40</td>
+                <td>A38</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 663</td>
+                <td>Mendoza</td>
+                <td>15:50</td>
+                <td>A32</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 605</td>
+                <td>Villa Gesell</td>
+                <td>16:00</td>
+                <td>A6</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 253</td>
+                <td>Santiago del Estero</td>
+                <td>16:05</td>
+                <td>A18</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\latam.jpg" alt="LATAM Airlines"></td>
+                <td>4M 7922</td>
+                <td>Cordoba</td>
+                <td>16:10</td>
+                <td>A34</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\argentina.jpg" alt="Aerolineas Argentinas"></td>
+                <td>AR 1703</td>
+                <td>Ushuaia</td>
+                <td>16:15</td>
+                <td>A33</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 219</td>
+                <td>Santa Fe</td>
+                <td>16:30</td>
+                <td>A4</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 657</td>
+                <td>San Luis</td>
+                <td>16:30</td>
+                <td>A16</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 563</td>
+                <td>Cordoba</td>
+                <td>16:35</td>
+                <td>A12</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 57</td>
+                <td>La Rioja</td>
+                <td>16:45</td>
+                <td>A3</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 619</td>
+                <td>Puerto Madryn</td>
+                <td>16:50</td>
+                <td>A20</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 203</td>
+                <td>Jujuy</td>
+                <td>16:55</td>
+                <td>A5</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 21</td>
+                <td>Bariloche</td>
+                <td>17:00</td>
+                <td>A15</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 193</td>
+                <td>Tucuman</td>
+                <td>17:05</td>
+                <td>A28</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 95</td>
+                <td>Bahia Blanca</td>
+                <td>17:10</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 143</td>
+                <td>El Calafate</td>
+                <td>17:15</td>
+                <td>A2</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 177</td>
+                <td>Resistencia</td>
+                <td>17:15</td>
+                <td>A23</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 83</td>
+                <td>Comodoro Rivadavia</td>
+                <td>17:25</td>
+                <td>A19</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 235</td>
+                <td>Mar del Plata</td>
+                <td>17:30</td>
+                <td>A14</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 163</td>
+                <td>Posadas</td>
+                <td>17:30</td>
+                <td>A7</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 595</td>
+                <td>Resistencia</td>
+                <td>17:30</td>
+                <td>A27</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 613</td>
+                <td>Bahia Blanca</td>
+                <td>17:30</td>
+                <td>A31</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+              </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 39</td>
+                <td>Mendoza</td>
+                <td>17:35</td>
+                <td>A22</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 135</td>
+                <td>Corrientes</td>
+                <td>17:40</td>
+                <td>A8</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 9</td>
+                <td>Cordoba</td>
+                <td>17:45</td>
+                <td>A43</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\latam.jpg" alt="LATAM Airlines"></td>
+                <td>4M 7802</td>
+                <td>Mendoza</td>
+                <td>17:50</td>
+                <td>A37</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 123</td>
+                <td>Rosario</td>
+                <td>18:05</td>
+                <td>A21</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 151</td>
+                <td>Formosa</td>
+                <td>18:05</td>
+                <td>A30</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 577</td>
+                <td>Posadas</td>
+                <td>18:10</td>
+                <td>A44</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 221</td>
+                <td>Santa Fe</td>
+                <td>18:35</td>
+                <td>A11</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 107</td>
+                <td>San Juan</td>
+                <td>18:40</td>
+                <td>A42</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 641</td>
+                <td>Santiago del Estero</td>
+                <td>18:45</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 625</td>
+                <td>Esquel</td>
+                <td>18:50</td>
+                <td>A13</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 31</td>
+                <td>Salta</td>
+                <td>18:55</td>
+                <td>A36</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NS 32</td>
+                <td>Comodoro Rivadavia</td>
+                <td>19:00</td>
+                <td>A9</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 647</td>
+                <td>Bariloche</td>
+                <td>19:10</td>
+                <td>A35</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 69</td>
+                <td>Catamarca</td>
+                <td>19:15</td>
+                <td>A39</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>    
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\latam.jpg" alt="LATAM Airlines"></td>
+                <td>4M 7768</td>
+                <td>Bariloche</td>
+                <td>19:30</td>
+                <td>A41</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>     
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 723</td>
+                <td>Cordoba</td>
+                <td>19:30</td>
+                <td>A40</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>  
+            <tr>
+              <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+              <td>NA 729</td>
+              <td>Salta</td>
+              <td>19:35</td>
+              <td>A25</td>
+              <td class="check-in"><span class="check-in-letter">A</span></td>
+              <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 725</td>
+                <td>Cordoba</td>
+                <td>19:35</td>
+                <td>A17</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 731</td>
+                <td>Neuquen</td>
+                <td>19:40</td>
+                <td>A24</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 733</td>
+                <td>Bariloche</td>
+                <td>19:45</td>
+                <td>A26</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+              </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 735</td>
+                <td>Mendoza</td>
+                <td>19:50</td>
+                <td>A10</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 737</td>
+                <td>Puerto Iguazu</td>
+                <td>19:55</td>
+                <td>A1</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 727</td>
+                <td>Ushuaia</td>
+                <td>20:00</td>
+                <td>A38</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 75</td>
+                <td>Neuquen</td>
+                <td>20:00</td>
+                <td>A32</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 97</td>
+                <td>Bahia Blanca</td>
+                <td>20:10</td>
+                <td>A6</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 179</td>
+                <td>Resistencia</td>
+                <td>20:15</td>
+                <td>A18</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 667</td>
+                <td>Bariloche</td>
+                <td>20:15</td>
+                <td>A34</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 565</td>
+                <td>Cordoba</td>
+                <td>20:15</td>
+                <td>A33</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 49</td>
+                <td>Puerto Iguazu</td>
+                <td>20:20</td>
+                <td>A4</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 125</td>
+                <td>Rosario</td>
+                <td>20:25</td>
+                <td>A16</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 223</td>
+                <td>Santa Fe</td>
+                <td>20:35</td>
+                <td>A12</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 137</td>
+                <td>Corrientes</td>
+                <td>21:10</td>
+                <td>A3</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>    
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 255</td>
+                <td>Santiago del Estero</td>
+                <td>21:20</td>
+                <td>A20</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 23</td>
+                <td>Bariloche</td>
+                <td>21:30</td>
+                <td>A5</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 665</td>
+                <td>Mendoza</td>
+                <td>21:30</td>
+                <td>A15</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 597</td>
+                <td>Resistencia</td>
+                <td>21:35</td>
+                <td>A28</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 59</td>
+                <td>La Rioja</td>
+                <td>21:45</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 205</td>
+                <td>Jujuy</td>
+                <td>21:45</td>
+                <td>A2</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 245</td>
+                <td>Viedma</td>
+                <td>21:50</td>
+                <td>A23</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 85</td>
+                <td>Comodoro Rivadavia</td>
+                <td>21:50</td>
+                <td>A19</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 153</td>
+                <td>Formosa</td>
+                <td>21:55</td>
+                <td>A14</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 11</td>
+                <td>Cordoba</td>
+                <td>22:00</td>
+                <td>A7</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>  
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 781</td>
+                <td>Salta</td>
+                <td>22:00</td>
+                <td>A27</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 195</td>
+                <td>Tucuman</td>
+                <td>22:00</td>
+                <td>A31</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 765</td>
+                <td>Neuquen</td>
+                <td>22:05</td>
+                <td>A22</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 165</td>
+                <td>Posadas</td>
+                <td>22:10</td>
+                <td>A8</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 767</td>
+                <td>Puerto Iguazu</td>
+                <td>22:20</td>
+                <td>A43</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 769</td>
+                <td>Mendoza</td>
+                <td>22:30</td>
+                <td>A37</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 771</td>
+                <td>Bariloche</td>
+                <td>22:30</td>
+                <td>A7</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 773</td>
+                <td>Ushuaia</td>
+                <td>22:40</td>
+                <td>A30</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 777</td>
+                <td>Cordoba</td>
+                <td>22:45</td>
+                <td>A44</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 779</td>
+                <td>Salta</td>
+                <td>23:00</td>
+                <td>A11</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>    
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 225</td>
+                <td>Santa Fe</td>
+                <td>23:05</td>
+                <td>A42</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 783</td>
+                <td>Jujuy</td>
+                <td>23:10</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 631</td>
+                <td>Rio Gallegos</td>
+                <td>23:15</td>
+                <td>A13</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 785</td>
+                <td>Rosario</td>
+                <td>23:25</td>
+                <td>A36</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 787</td>
+                <td>Bariloche</td>
+                <td>23:25</td>
+                <td>A9</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 775</td>
+                <td>Ushuaia</td>
+                <td>23:30</td>
+                <td>A11</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 237</td>
+                <td>Mar del Plata</td>
+                <td>23:40</td>
+                <td>A39</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>        
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\argentina.jpg" alt="Aerolineas Argentinas"></td>
+                <td>AR 1688</td>
+                <td>Rosario</td>
+                <td>23:50</td>
+                <td>A41</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 567</td>
+                <td>Cordoba</td>
+                <td>23:55</td>
+                <td>A40</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+          </tbody>
+            <tbody>
+                <tr>
+                    <td>Domingo 02 de Julio de 2023 • Sunday, July 02, 2023</td> 
+                </tr>
+            </tbody>
+          <tbody>
+            <tr></tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 555</td>
+                <td>Cordoba</td>
+                <td>0:00</td>
+                <td>A26</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 633</td>
+                <td>Santiago del Estero</td>
+                <td>0:30</td>
+                <td>A10</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 1</td>
+                <td>Cordoba</td>
+                <td>1:00</td>
+                <td>A1</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 13</td>
+                <td>Bariloche</td>
+                <td>1:00</td>
+                <td>A17</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 25</td>
+                <td>Salta</td>
+                <td>1:05</td>
+                <td>A32</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 33</td>
+                <td>Mendoza</td>
+                <td>1:05</td>
+                <td>A2</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 41</td>
+                <td>Puerto Iguazu</td>
+                <td>1:05</td>
+                <td>A18</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 579</td>
+                <td>Formosa</td>
+                <td>1:05</td>
+                <td>A34</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 51</td>
+                <td>La Rioja</td>
+                <td>1:10</td>
+                <td>A33</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 61</td>
+                <td>Catamarca</td>
+                <td>1:15</td>
+                <td>A3</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 71</td>
+                <td>Ushuaia</td>
+                <td>1:15</td>
+                <td>A16</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 67</td>
+                <td>Neuquen</td>
+                <td>1:20</td>
+                <td>A19</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 77</td>
+                <td>Comodoro Rivadavia</td>
+                <td>1:20</td>
+                <td>A4</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 569</td>
+                <td>Posadas</td>
+                <td>1:20</td>
+                <td>A20</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 87</td>
+                <td>Bahia Blanca</td>
+                <td>1:25</td>
+                <td>A5</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 99</td>
+                <td>San Juan</td>
+                <td>1:30</td>
+                <td>A15</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NS 2</td>
+                <td>Comodoro Rivadavia</td>
+                <td>1:30</td>
+                <td>A35</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 109</td>
+                <td>Rosario</td>
+                <td>1:30</td>
+                <td>A36</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 127</td>
+                <td>Corrientes</td>
+                <td>1:35</td>
+                <td>A6</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 139</td>
+                <td>El Calafate</td>
+                <td>1:40</td>
+                <td>A21</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 587</td>
+                <td>Resistencia</td>
+                <td>1:40</td>
+                <td>A31</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 143</td>
+                <td>Formosa</td>
+                <td>1:45</td>
+                <td>A14</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 155</td>
+                <td>Posadas</td>
+                <td>1:50</td>
+                <td>A7</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 167</td>
+                <td>Resistencia</td>
+                <td>1:55</td>
+                <td>A44</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 181</td>
+                <td>Rio Gallegos</td>
+                <td>2:10</td>
+                <td>A30</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 187</td>
+                <td>Tucuman</td>
+                <td>2:15</td>
+                <td>A22</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 197</td>
+                <td>Jujuy</td>
+                <td>2:20</td>
+                <td>A8</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 207</td>
+                <td>Santa Fe</td>
+                <td>2:25</td>
+                <td>A43</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 227</td>
+                <td>Mar del Plata</td>
+                <td>2:30</td>
+                <td>A37</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 239</td>
+                <td>Viedma</td>
+                <td>2:40</td>
+                <td>A23</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 247</td>
+                <td>Santiago del Estero</td>
+                <td>3:00</td>
+                <td>A12</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 111</td>
+                <td>Rosario</td>
+                <td>3:50</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 3</td>
+                <td>Cordoba</td>
+                <td>4:10</td>
+                <td>A11</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 659</td>
+                <td>Mendoza</td>
+                <td>4:20</td>
+                <td>A42</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\latam.jpg" alt="LATAM Airlines"></td>
+                <td>4M 7902</td>
+                <td>Bariloche</td>
+                <td>4:25</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 209</td>
+                <td>Santa Fe</td>
+                <td>4:30</td>
+                <td>A10</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 15</td>
+                <td>Bariloche</td>
+                <td>4:30</td>
+                <td>A28</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 557</td>
+                <td>Cordoba</td>
+                <td>4:40</td>
+                <td>A38</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 229</td>
+                <td>Mar Del Plata</td>
+                <td>4:50</td>
+                <td>A11</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 89</td>
+                <td>Bahia Blanca</td>
+                <td>4:55</td>
+                <td>A39</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 169</td>
+                <td>Resistencia</td>
+                <td>4:55</td>
+                <td>A25</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 635</td>
+                <td>Santiago del Estero</td>
+                <td>5:00</td>
+                <td>A40</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 649</td>
+                <td>Ushuaia</td>
+                <td>5:10</td>
+                <td>A26</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 101</td>
+                <td>San Juan</td>
+                <td>5:10</td>
+                <td>A13</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NS 14</td>
+                <td>Comodoro Rivadavia</td>
+                <td>5:20</td>
+                <td>A41</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 571</td>
+                <td>Posadas</td>
+                <td>5:30</td>
+                <td>A27</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 581</td>
+                <td>Formosa</td>
+                <td>5:35</td>
+                <td>A9</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 129</td>
+                <td>Corrientes</td>
+                <td>5:35</td>
+                <td>A1</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 63</td>
+                <td>Catamarca</td>
+                <td>5:40</td>
+                <td>A17</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 589</td>
+                <td>Resistencia</td>
+                <td>5:40</td>
+                <td>A30</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 43</td>
+                <td>Puerto Iguazu</td>
+                <td>5:55</td>
+                <td>A2</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 69</td>
+                <td>Neuquen</td>
+                <td>6:00</td>
+                <td>A18</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 157</td>
+                <td>Posadas</td>
+                <td>6:00</td>
+                <td>A34</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 607</td>
+                <td>Bahia Blanca</td>
+                <td>6:00</td>
+                <td>A33</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 739</td>
+                <td>Bariloche</td>
+                <td>6:00</td>
+                <td>A3</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 741</td>
+                <td>Jujuy</td>
+                <td>6:00</td>
+                <td>A16</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\argentina.jpg" alt="Aerolineas Argentinas"></td>
+                <td>AR 1679</td>
+                <td>Cordoba</td>
+                <td>6:05</td>
+                <td>A19</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 743</td>
+                <td>Ushuaia</td>
+                <td>6:05</td>
+                <td>A4</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 145</td>
+                <td>Formosa</td>
+                <td>6:05</td>
+                <td>A20</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 745</td>
+                <td>Mendoza</td>
+                <td>6:05</td>
+                <td>A5</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 113</td>
+                <td>Rosario</td>
+                <td>6:10</td>
+                <td>A15</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\latam.jpg" alt="LATAM Airlines"></td>
+                <td>4M 7788</td>
+                <td>Salta</td>
+                <td>6:10</td>
+                <td>A27</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\latam.jpg" alt="LATAM Airlines"></td>
+                <td>4M 7909</td>
+                <td>Cordoba</td>
+                <td>6:10</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 53</td>
+                <td>La Rioja</td>
+                <td>6:10</td>
+                <td>A6</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 749</td>
+                <td>Santiago del Estero</td>
+                <td>6:10</td>
+                <td>A21</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 751</td>
+                <td>Cordoba</td>
+                <td>6:20</td>
+                <td>A31</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 643</td>
+                <td>Bariloche</td>
+                <td>6:20</td>
+                <td>A14</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 211</td>
+                <td>Santa Fe</td>
+                <td>6:30</td>
+                <td>A7</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 755</td>
+                <td>Salta</td>
+                <td>6:30</td>
+                <td>A44</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 35</td>
+                <td>Mendoza</td>
+                <td>6:35</td>
+                <td>A32</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 757</td>
+                <td>Neuquen</td>
+                <td>6:40</td>
+                <td>A22</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\argentina.jpg" alt="Aerolineas Argentinas"></td>
+                <td>AR 1624</td>
+                <td>Mendoza</td>
+                <td>6:45</td>
+                <td>A8</td>
+                <td class="check-in"><span class="check-in-letter2">C</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 753</td>
+                <td>Cordoba</td>
+                <td>6:50</td>
+                <td>A43</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 759</td>
+                <td>Bariloche</td>
+                <td>6:50</td>
+                <td>A37</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 615</td>
+                <td>Puerto Madryn</td>
+                <td>7:00</td>
+                <td>A23</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 627</td>
+                <td>Rio Gallegos</td>
+                <td>7:00</td>
+                <td>A9</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 747</td>
+                <td>Puerto Iguazu</td>
+                <td>7:00</td>
+                <td>A36</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 709</td>
+                <td>Bariloche</td>
+                <td>7:05</td>
+                <td>A11</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 711</td>
+                <td>Cordoba</td>
+                <td>7:05</td>
+                <td>A42</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 713</td>
+                <td>Neuquen</td>
+                <td>7:10</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 199</td>
+                <td>Jujuy</td>
+                <td>7:10</td>
+                <td>A13</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 189</td>
+                <td>Tucuman</td>
+                <td>7:15</td>
+                <td>A28</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 621</td>
+                <td>Esquel</td>
+                <td>7:15</td>
+                <td>A38</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 79</td>
+                <td>Comodoro Rivadavia</td>
+                <td>7:20</td>
+                <td>A34</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 719</td>
+                <td>Salta</td>
+                <td>7:20</td>
+                <td>A39</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 249</td>
+                <td>Santiago del Estero</td>
+                <td>7:20</td>
+                <td>A25</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 599</td>
+                <td>Villa Gesell</td>
+                <td>7:30</td>
+                <td>A40</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 717</td>
+                <td>Ushuaia</td>
+                <td>7:30</td>
+                <td>A29</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 27</td>
+                <td>Salta</td>
+                <td>7:35</td>
+                <td>A10</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 721</td>
+                <td>Jujuy</td>
+                <td>7:40</td>
+                <td>A41</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 715</td>
+                <td>Cordoba</td>
+                <td>7:50</td>
+                <td>A35</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 171</td>
+                <td>Resistencia</td>
+                <td>7:55</td>
+                <td>A12</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 653</td>
+                <td>San Luis</td>
+                <td>8:00</td>
+                <td>A1</td>
+                <td class="check-in"><span class="check-in-letter">A</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 707</td>
+                <td>Ushuaia</td>
+                <td>8:00</td>
+                <td>A12</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+            <tr>
+                <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt="NAMA"></td>
+                <td>NA 63</td>
+                <td>Ushuaia</td>
+                <td>8:15</td>
+                <td>A32</td>
+                <td class="check-in"><span class="check-in-letter">B</span></td>
+                <td>En Horario</td>
+            </tr>
+          
+
+          </tbody>
+    <script src="departuresA.js"></script>
+    </body>
+    </html>
+
+
+
+
+                       
+          
+

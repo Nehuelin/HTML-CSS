@@ -1,0 +1,425 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(27, 35, 150);
+    color: white;
+    font-size: 150%;
+    margin: 0px;
+    display: block;
+}
+
+/* 100%/1.4 GothamLight,"Trebuchet ms",verdana,arial,helvetica,sans-serif; 
+'Open Sans', sans-serif*/
+
+  
+  .check-in-letter {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff8800; /* Adjust the background color as desired */
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    font-weight: 500;
+    margin-right: 10px; /* Adjust the spacing between letters */
+  }
+  
+  .check-in-letter2 {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dd00ff; /* Adjust the background color as desired */
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    font-weight: 500;
+    margin-right: 10px; /* Adjust the spacing between letters */
+  }
+
+  .check-in-letter3 {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #22c071; /* Adjust the background color as desired */
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    font-weight: 500;
+    margin-right: 10px; /* Adjust the spacing between letters */
+  }
+
+  .bottom {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 20px;
+    width: 100%;
+    height: 5%;
+    background-color: rgb(39,40,34);
+    vertical-align: middle;
+    text-align: justify;
+    line-height: 200%;
+    z-index: 4;
+}
+
+
+
+/* .bottomtip1es {
+    animation-name: slide-in1;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+  }
+  
+.bottomtip1en {
+    animation-name: slide-in2;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-delay: 28s;
+}
+  
+  @keyframes slide-in1 {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    5%, 25%, 30% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    45%, 50% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slide-in2 {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    10%, 50%, 60% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    90%, 100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  } */
+  
+  #bottomtip {
+    position: absolute;
+    transform: translateX(100px);
+}
+
+.bottomtip1es {
+    animation-name: bottomtip1es;
+    animation-duration: 14s;
+    animation-iteration-count: infinite
+}
+
+@keyframes bottomtip1es {
+0% {opacity: 100%;}
+10% {opacity: 0%;}
+50% {opacity: 0%;}
+60% {opacity: 100%;}
+}
+
+.bottomtip1en {
+    animation-name: bottomtip1en;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bottomtip1en {
+    0% {opacity: 0%;}
+    10% {opacity: 100%;}
+    50% {opacity: 100%;}
+    60% {opacity: 0%;}
+    100% {opacity: 0%;}
+}
+
+
+
+
+table {
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    -webkit-border-horizontal-spacing: 10px;
+    -webkit-border-vertical-spacing: 10px;
+    width: 100%;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+colgroup {
+    display: table-column-group;
+}
+
+tbody {
+
+    vertical-align: middle;
+    border-color: inherit;
+    align-content: center;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+td {
+    border-bottom: 1px solid white;
+    display: table-cell;
+    vertical-align: inherit;
+    text-align: center;
+}
+
+#boarding {
+    background-color: rgb(211, 211, 29);
+    text-align: center;
+}
+
+#departed {
+    background-color: rgb(64, 255, 47);
+    text-align: center;
+}
+
+#closed {
+    background-color: orange;
+    text-align: center;
+}
+
+#lastcall {
+    background-color: red;
+    text-align: center;
+}
+
+#delayed {
+    background-color: red;
+    text-align: center;
+}
+
+.delayed1 {
+    animation-name: delayed_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(-40px);
+    
+}
+
+@keyframes delayed_sample {
+    0% {opacity: 100%;}
+    10% {opacity: 0%;}
+    50% {opacity: 0%;}
+    60% {opacity: 100%;}
+}
+
+.delayed_time {
+    animation-name: delayed_time;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    position: relative;
+    z-index: -1;
+}
+
+@keyframes delayed_time {
+    0% {opacity: 0%;}
+    10% {opacity: 100%;}
+    50% {opacity: 100%;}
+    60% {opacity: 0%;}
+    100% {opacity: 0%;}
+}
+
+img {
+    width: 160px;
+}
+
+.infotr {
+    position: sticky;
+    top: 0;
+    background-color: black;
+
+}
+
+#estimated {
+    background-color: orange;
+    text-align: center;
+}
+
+.delayedlanding {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(-28px);
+}
+.estimated1 {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(-7px);
+}
+
+.estimatedtime {
+    animation-name: estimated_time;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    position: relative;
+    z-index: -1;
+}
+
+@keyframes estimated_sample {
+    0% {opacity: 100%;}
+    10% {opacity: 0%;}
+    50% {opacity: 0%;}
+    60% {opacity: 100%;}
+}
+
+@keyframes estimated_time {
+    0% {opacity: 0%;}
+    10% {opacity: 100%;}
+    50% {opacity: 100%;}
+    60% {opacity: 0%;}
+    100% {opacity: 0%;}
+}
+
+.stopover1landing {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(-28px);
+}
+
+.stopover2landing {
+    animation-name: estimated_time;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    position: relative;
+    z-index: -1;
+    opacity: 0%;
+}
+
+
+.stopover1landingH {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(42px);
+}
+
+.stopover1landingC {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(75px);
+}
+
+.stopover1landingP {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(32px);
+}
+
+.stopover1landingS {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(65px);
+}
+
+.stopover1landingT {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(53px);
+}
+
+.stopover1landingN {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(64px);
+}
+
+
+.stopover1departureS {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(75px);
+}
+
+.stopover1departureA {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(-75px);
+}
+
+.stopover1departureO {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX(42px);
+}
+
+
+.stopover1departure {
+    animation-name: estimated_sample;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    position: absolute;
+    transform:translateX();
+}
+
+.stopover2departure {
+    animation-name: estimated_time;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    position: relative;
+    z-index: -1;
+    opacity: 0%;
+}
+

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
+
+
+select {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("dropdown-arrow.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+}
+
+select:hover,
+select:focus {
+  border-color: #999;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+input:hover,
+input:focus {
+    border-color: #999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+  
+input::placeholder {
+    color: #999;
+}
+
+label {
+    font-family: Arial, sans-serif;
+    margin-bottom: 5px;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #1d1c1c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #222121;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 18px;
+    color: #272626;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+  
+h1, h2, h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #b5b9f8, #9ea89d);
+}
+footer{
+    font-family: 'Roboto', sans-serif;
+}
+
+div {
+    color: transparent;
+}
+
+div.note {
+    color: #1d1c1c;
+}

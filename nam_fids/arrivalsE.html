@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fids.css">
+    <title>Document</title>
+    <!-- LOCAL TIME: 19:24 -->
+</head>
+<body onload="startTime()">
+      <!-- <div class="bottom">  
+        <section id="bottomtip" class="bottomtip1es">Recuerde vigilar el equipaje en todo momento</section><section id="bottomtip" class="bottomtip1en">Remember to check for your luggage at all times</section>
+        <span>Local Time: 11:01</span>
+        <span id="txt"></span>
+          
+ <script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  
+      return i;
+    }
+    </script>
+    </div> 
+-->
+<table cellpadding="1" cellspacing="10" width="100%" >
+    <tbody>
+        <tr>
+            <td>Arrivos • Arrivals</td> 
+        </tr>
+    </tbody>
+</table>
+<table cellpadding="1" cellspacing="10" width="100%">
+    <colgroup>
+        <col style="width:15%">
+        <col style="width:5%">
+        <col style="width:25%">
+        <col style="width:10%">
+        <col style="width:10%">
+        <col style="width:15%">
+    </colgroup>
+    <tbody>
+        <tr class="infotr">
+            <td>Aerolinea
+                Airline
+            </td>
+            <td>Vuelo
+                Flight
+            </td>
+            <td>Destino
+                Destination
+            </td>
+            <td>Hora  
+                Time
+            </td>
+            <td>Puerta
+                Gate
+            </td>
+            <td>Estado
+                Status
+            </td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+            <td>NG 540</td>
+            <td>San Juan-Puerto Rico</td>
+            <td>18:05</td>
+            <td>L25</td>
+            <td id="departed">Aterrizado</td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\cathay.jpg" alt=""></td>
+            <td>CX 991</td>
+            <td><span class="stopover1landingH">Hong Kong</span><span class="stopover2landing">Fráncfort del Meno</span></td>
+            <td>18:10</td>
+            <td>L23</td>
+            <td id="departed">Aterrizado</td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\emirates.jpg" alt=""></td>
+            <td>EK 1001</td>
+            <td>Dubái</td>
+            <td>18:30</td>
+            <td>L24</td>
+            <td id="departed">Aterrizado</td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+            <td>NG 536</td>
+            <td>Panamá-Tocumen</td>
+            <td>18:50</td>
+            <td>L26</td>
+            <td id="departed">Aterrizado</td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\aircaraibes.png" alt=""></td>
+            <td>TX 641</td>
+            <td>Pointe-á-Pitre</td>
+            <td>19:00</td>
+            <td>L27</td>
+            <td id="departed">Aterrizado</td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+            <td>NG 514</td>
+            <td>Punta Cana</td>
+            <td>19:40</td>
+            <td>-</td>
+            <td><span id="delayed" class="delayedlanding">Demorado</span><span class="estimatedtime">22:35</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\aircaraibes.png" alt=""></td>
+            <td>TX 639</td>
+            <td>Fort-de-France</td>
+            <td>19:40</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">19:25</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+            <td>NG 478</td>
+            <td>Johannesburgo</td>
+            <td>19:55</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">19:53</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\egyptair1.png" alt=""></td>
+            <td>MS 1006</td>
+            <td><span class="stopover1landingC">El Cairo</span><span class="stopover2landing">San Pablo-Guarulhos</span></td>
+            <td>20:05</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">20:17</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+            <td>NG 522</td>
+            <td>Santo Domingo</td>
+            <td>20:05</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">19:49</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+            <td>NG 500</td>
+            <td><span class="stopover1landingP">Pekin</span><span class="stopover2landing">Ámsterdam</span></td>
+            <td>20:15</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">20:32</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\copa.jpg" alt=""></td>
+            <td>CP 995</td>
+            <td>Panamá-Tocumen</td>
+            <td>20:30</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">20:06</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+            <td>NG 490</td>
+            <td><span class="stopover1landingH">Hong Kong</span><span class="stopover2landing">Fráncfort del Meno</span></td>
+            <td>21:35</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">21:35</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+            <td>NG 510</td>
+            <td><span class="stopover1landingS">Seul</span><span class="stopover2landing">Roma-Fiumicino</span></td>
+            <td>21:40</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">21:38</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\cubana.png" alt=""></td>
+            <td>CU 497</td>
+            <td>Habana</td>
+            <td>22:20</td>
+            <td>-</td>
+            <td id="closed">Consulte Cía</td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\copa.jpg" alt=""></td>
+            <td>CP 991</td>
+            <td>Panamá-Tocumen</td>
+            <td>22:41</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">22:40</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\japanair1.png" alt=""></td>
+            <td>JL 717</td>
+            <td><span class="stopover1landing">Tokyo-Haneda</span><span class="stopover2landing">Honolulu</span></td>
+            <td>23:10</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">23:01</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+            <td>NG 502</td>
+            <td><span class="stopover1landingT">Tokyo-Haneda</span><span class="stopover2landing">Paris-Charles de Gaulle</span></td>
+            <td>23:30</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">23:01</span></td>
+        </tr>
+        <tr>
+            <td><img src="C:\PROGRAMACION\nam_fids\img\namalogol.PNG" alt=""></td>
+            <td>NG 504</td>
+            <td><span class="stopover1landingN">Tokyo-Narita</span><span class="stopover2landing">Paris-Charles de Gaulle</span></td>
+            <td>23:55</td>
+            <td>-</td>
+            <td><span id="estimated" class="estimated1">Estima</span><span class="estimatedtime">23:01</span></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

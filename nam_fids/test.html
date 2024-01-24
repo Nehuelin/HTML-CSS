@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fidstwo.css">
+  <title>Flight Information Display System</title>
+</head>
+<body>
+  <h1>Flight Information Display System</h1>
+  
+  <table class="flight-table">
+    <thead>
+      <tr>
+        <th>Flight</th>
+        <th>Airline</th>
+        <th>Destination</th>
+        <th>Departure Time</th>
+        <th>Gate</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="flight-code" id="flight-code-123">Flight 123</td>
+        <td><img class="airline-logo" src="airline1.png" alt="Airline 1"></td>
+        <td>
+          <span class="destination-fade show" id="destination-123-1">Pekin</span>
+          <span class="destination-fade" id="destination-123-2" style="display: none;">Madrid</span>
+        </td>
+        <td>10:00 AM</td>
+        <td>Gate 5</td>
+        <td><span class="flight-status" id="flight-status-123">On time</span></td>
+        <td><span class="departure-time" id="departure-time-123"></span></td>
+      </tr>
+      <tr>
+        <td class="flight-code" id="flight-code-456">Flight 456</td>
+        <td><img class="airline-logo" src="airline2.png" alt="Airline 2"></td>
+        <td>
+          <span class="destination-fade show" id="destination-456-1">New York</span>
+          <span class="destination-fade" id="destination-456-2" style="display: none;">Punta Cana</span>
+        </td>
+        <td>2:00 PM</td>
+        <td>Gate 8</td>
+        <td><span class="flight-status" id="flight-status-456">Delayed</span></td>
+        <td><span class="departure-time" id="departure-time-456"></span></td>
+      </tr>
+      <!-- Add more rows for additional flights -->
+    </tbody>
+  </table>
+
+  <script src="fidstwo.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- TOGGLE BETWEEN CODESHARES (IMG AND FL NUMBER) 
+    TRY MAKE A PYTHON AND ANOTHER HTML, WHERE WE CAN PUT DATA TO THEN CHANGE FIDS STATUS
+    ADD RANDOM MESSAGES THAT APPEAR ON THE SIDES OF THE FIDS
+-->

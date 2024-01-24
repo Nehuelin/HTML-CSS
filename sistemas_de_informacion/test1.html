@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento de ID</title>
+</head>
+<body>
+    <h1>Sistema de Seguimiento de ID</h1>
+ 
+        
+    <form action=""> 
+        <fieldset>
+            <legend><h2>Ingresar Prenda al Sistema</h2></legend>
+
+
+            <div>---</div>
+            <label for="username">INGRESAR NOMBRE COMPLETO DEL USUARIO</label>
+            <input type="text" id="userfullname" placeholder="Ingresar Nombre Completo del Usuario">           
+        
+
+            <label for="usergarment">INGRESAR TIPO DE PRENDA</label>
+            <input type="text" id="clothes_type" placeholder="Ingresar Tipo de Prenda">
+            <div>---</div>          
+            <label for="pass_user">INGRESAR MAIL DEL CLIENTE</label>
+            <input type="text" id="usermail" placeholder="Ingresar mail del cliente">
+            
+            <label for="number_user">INGRESAR NUM. TEL. DEL CLIENTE</label>
+            <input type="text" id="number_user" placeholder="Ingresar telefono del cliente">
+
+            <label for="number_user">INGRESAR DIRECCION DEL CLIENTE</label>
+            <input type="text" id="address_user" placeholder="Ingresar Direccion del cliente">
+
+            <div>---</div>
+
+        </fieldset>
+        <input type="submit" value="Agregar a Base de Datos"> 
+
+        <input type="reset" value="Borrar Informacion Ingresada">
+    </form>         
+        
+        <form action="">      
+        <fieldset>
+            <legend><h2>Ajustes de valores de ID</h2></legend>
+            <legend><h4>Modificar tipo de Prenda</h4></legend>
+           
+            <div>---</div>
+            
+            <label for="username">INGRESAR ID</label>
+            <input type="number" id="username" placeholder="Ingresar ID">
+            
+            <label for="comment_user">INGRESAR NUEVA DESCRIPCION</label>
+            <input type="text" id="desc" placeholder="Ingresar nueva descripcion">
+            
+            <div>---</div>
+            <div>---</div>
+            
+            <legend><h4>Actualizar estado de Prenda (Usar en caso de que no funcione el ticket)</h4></legend>
+            
+            <div>---</div>
+            
+            <label for="username">INGRESAR ID</label>
+            <input type="number" id="username" placeholder="Ingresar ID">
+            
+            <label for="failsafe_status">INGRESAR ESTADO</label>
+            <select id="clothes_status" name="status">
+                <option value="None">N/A</option>
+                <option value="lavando">Lavando</option>
+                <option value="limpieza_en_seco">Limpieza en Seco</option>
+                <option value="terminado">Terminado</option>
+            </select>
+                
+        </fieldset>
+        <input type="submit" value="Agregar a Base de Datos"> 
+        <input type="reset" value="Borrar Informacion Ingresada">
+        </form>
+        
+        <form action="resultadodb.html" method="post">   
+        <fieldset>
+            <legend><h2>Seguimiento de ID</h2></legend>
+            <legend><h4>Chequear Estado de Prenda (Utilizar alguna de las dos funciones)</h4></legend>
+            
+            <div>---</div>
+            
+            <label for="username">INGRESAR ID</label>
+            <input type="number" id="username" placeholder="Ingresar ID">
+            
+            <div>---</div>
+            <div>---</div>
+
+            <label for="username">INGRESAR NUMERO DE TICKET</label>
+            <input type="number" id="usernameticket" placeholder="Ingresar Numero de Ticket">
+        </fieldset>
+        
+
+        <input type="submit" value="Consultar con Base de Datos"> 
+
+        <input type="reset" value="Borrar Informacion Ingresada">
+
+        <div>---</div>
+        <div>---</div>  
+    </form>
+    
+    <footer> © Sistemas GMMPV 2023
+    </footer>
+
+</body>

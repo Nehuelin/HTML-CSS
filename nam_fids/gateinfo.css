@@ -1,0 +1,143 @@
+body {
+font-family: 'Calibri', Arial, sans-serif;
+text-align: center;
+color: white;
+background-color: blue;
+margin: 0;
+height: 800px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+    line-height: normal;
+}
+
+#logo {
+  position: relative;
+  background-color: white;
+  padding: 10px;
+}
+
+#logo img {
+  width: 40%;
+  height: 40%;
+}
+
+
+#flight-details {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+#flight-number {
+  font-size: 80px;
+  font-weight: bold;
+  width: 100%;
+  height: 189px;
+  text-align: center;
+  line-height: 189px; /* SHOULD MATCH WITH CONTAINER HEIGHT TO BE CENTERED */
+  background-color: rgb(53, 53, 248);
+}
+
+#destination {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+#status {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+
+#times-table {
+    display: flex;
+    justify-content: space-between;
+    font-size: 48px;
+    font-weight: bold;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+    table-layout: fixed;
+    height: 40px;
+    width: 100%;
+    transform: translateY(400px);
+  }
+  
+  #times-table td {
+    width: 700px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #times-table tr {
+    width: 70%;
+  }
+
+.on-time {
+background-color: none;
+  }
+  
+.delayed {
+    background-color: rgb(255, 0, 0);
+  }
+
+.boarding {
+    background-color: orange;
+  }
+
+  @keyframes statusAnimation {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    26% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    27% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    48% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #status-cell {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  #status-text,
+  #panish-text {
+    display: inline-block;
+    animation: statusAnimation 8s infinite;
+  }
+
+  #times-table2 {
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    height: 40px;
+    width: 50%;
+    transform: translateY(400px);
+  }
+
+  #times-table2 th {
+    background-color: rgb(0, 0, 156);
+  }

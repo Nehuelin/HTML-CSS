@@ -1,0 +1,56 @@
+    /* CSS styles for the FIDS */
+body {
+    font-family: Arial, sans-serif;
+    }
+      
+.flight-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    }
+      
+      .flight-table th, .flight-table td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      .flight-table th {
+        background-color: #f2f2f2;
+      }
+      
+      .airline-logo {
+        max-width: 30px;
+        max-height: 30px;
+      }
+      
+      .destination-fade {
+        transition: opacity 0.5s;
+        opacity: 0;
+      }
+      
+      .destination-fade.show {
+        opacity: 1;
+      }
+  
+      .flight-status {
+        display: inline-block;
+        padding: 5px;
+        border-radius: 10px;
+        font-weight: bold;
+      }
+          /* Custom styles for different flight statuses */
+      .status-yellow {
+        background-color: yellow;
+      }
+      
+      .status-orange {
+        background-color: orange;
+      }
+      
+      .status-red {
+        background-color: red;
+      }
+
+
+      
