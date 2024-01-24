@@ -1,0 +1,42 @@
+
+p {
+    color: blueviolet;
+    line-height: 1.8;
+}
+
+ol {
+    list-style-type: lower-alpha;
+}
+
+a {
+    text-decoration: none;
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 { 
+    font-style: normal;
+    font-weight: 100;
+    font-size: 100px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: underline;
+    background-color: aquamarine;
+    background-image: url(img/perritos-primeros-auxilios.jpg);
+}
+
+body {
+    background-color: beige;
+}
+
+.center {
+    text-align: center;
+}
+
+.rightside {
+    text-align: right;
+}
+
+.leftside {
+    text-align: left;
+}
+

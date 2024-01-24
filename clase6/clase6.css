@@ -1,0 +1,34 @@
+#grid {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 300px 500px 200px;
+    background-color: rgb(194, 217, 218);
+    grid-template-areas: "a1 a1 a1"
+                         "a2 a3 a3"
+                         "a2 a4 a4";
+    justify-items: center;
+    align-items: center;
+}
+
+#child_1 {
+    background-color: rgb(219, 99, 99);
+    grid-area: a3;
+    height: 70%;
+    width: 70%;
+}
+#child_2 {
+    background-color: greenyellow;
+    grid-area: a1;
+    width: 80%;
+    height: 80%;
+}
+#child_3 {
+    background-color: orange;
+    grid-area: a4;
+    height: 90%;
+    width: 90%;
+}
+#child_4 {
+    background-color: palevioletred;
+    grid-area: a2;
+}

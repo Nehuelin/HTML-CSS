@@ -1,0 +1,87 @@
+body{
+    height: 3000px;
+}
+
+div{
+    height: 500px;
+    width: 500px;
+    background-image: linear-gradient(red , blue);
+    transition: all 2s;
+    filter:grayscale(100%)
+}
+
+
+#ex_1:hover{
+    transform: translate(30px,30px);
+    filter: none;
+    /* transform: rotate(45deg);
+    transform: scale(2,2);  */
+    /* Solo se puede usar un TRANSFORM a la vez. Se usara el ultimo en caso de que haya multiples triggers. */
+}
+
+#ex_2:hover{
+    transform: rotate(120deg);
+    background-color: aquamarine;
+    filter: none;
+}
+
+#ex_3:hover{
+    transform: skewX(12);
+    filter: none;
+}
+
+
+
+section{
+    height: 200px;
+    width: 200px;
+    animation-name: animation_test;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation_test{
+    0% {
+        width: 100px;
+    background-color: red;}
+
+    25% {
+        width: 300px;
+        background-color: lightblue;
+    }
+
+    50% {
+        width: 200px;
+        background-color: coral;
+    } 
+
+    75% {
+        width: 300px;
+        background-color: orange;
+    }
+    
+    100% {
+        width: 100px;
+        background-color: red;
+    }
+
+}
+
+
+h1{
+    font-size: 20px;    
+}
+
+/* Modelos de animaciones ---> wow.js   animate.style  */
+
+input{
+    margin-top: 20px;
+    width: 10%;
+    transition: all 2s;
+}
+input:focus{
+    padding: 5px 5px 5px 5px;
+    width: 50%;
+    background-color: blanchedalmond;
+
+}

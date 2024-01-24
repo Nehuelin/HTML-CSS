@@ -1,0 +1,31 @@
+#grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 600px 100px 1000px 300px;
+    grid-template-areas: "header" "nav" "main" "footer";
+}
+
+header {
+    background-color: chartreuse;
+    grid-area: header;
+}
+
+nav {
+    background-color: aqua;
+    grid-area: nav;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 30% 30% 30%;
+    grid-template-areas: "img1 img2 img2" 
+                        "img 3 img4";
+    background-color: darkorange;
+    grid-area: main;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    grid-area: footer;
+}

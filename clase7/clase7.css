@@ -1,0 +1,53 @@
+
+#container_1 {
+    height: 600px;
+}
+
+/* PANTALLAS XS */
+@media only screen and (max-width: 600px) {
+
+    #container_1 {
+        background-color: red;
+    } 
+
+    p {
+        color: white;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+}
+
+/* PANTALLAS S */
+@media only screen and (min-width: 600px) {
+
+    #container_1 {
+        background-color: mediumorchid;
+    }
+
+    p {
+        color: rgb(240, 229, 134);
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+}
+
+/* PANTALLAS L */
+
+@media only screen and (min-width: 992px) {
+
+    #container_1 {
+        background-color: rgb(85, 211, 133);
+    }
+
+    p {
+        color: rgb(221, 100, 92);
+        font-size: 0px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+
+
+}
